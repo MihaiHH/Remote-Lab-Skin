@@ -6,11 +6,12 @@ import {
 } from '@angular/material/sidenav';
 import { MatTab, MatTabGroup } from '@angular/material/tabs';
 import { MatTooltip } from '@angular/material/tooltip';
-import { CodeEditor } from '@acrodata/code-editor';
-import { FormsModule } from '@angular/forms';
-import { ESP32_CODE_EXAMPLE, EXAMPLE_CODES } from '../../constants/code-examples.constants';
-import { AVAILABLE_EDITOR_LANGUAGES } from '../../constants/languages.constants';
+import {
+  ESP32_CODE_EXAMPLE,
+  EXAMPLE_CODES,
+} from '../../constants/code-examples.constants';
 import { MatListItem, MatNavList } from '@angular/material/list';
+import { ControllerCodeEditorComponent } from '../controller-code-editor/controller-code-editor.component';
 
 @Component({
   selector: 'app-controller-container',
@@ -21,18 +22,16 @@ import { MatListItem, MatNavList } from '@angular/material/list';
     MatTabGroup,
     MatSidenavContainer,
     MatTooltip,
-    CodeEditor,
-    FormsModule,
     MatNavList,
     MatListItem,
+    ControllerCodeEditorComponent,
   ],
   templateUrl: './controller-container.component.html',
   styleUrl: './controller-container.component.scss',
 })
 export class ControllerContainerComponent {
   isSidenavOpen: boolean = true;
-  value = ESP32_CODE_EXAMPLE;
-  languages = AVAILABLE_EDITOR_LANGUAGES;
+  code = ESP32_CODE_EXAMPLE;
   exampleCodes = EXAMPLE_CODES;
 
   toggleSidenav(sidenav: any): void {
