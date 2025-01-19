@@ -1,4 +1,5 @@
-<div style="height: 100%">
-  <code-editor indentWithTab="true" language="C" [languages]='languages' autoFocus="true"
-    [ngModel]="code" />
+<div class="controller-code-editor--container">
+  <app-cam-dialog></app-cam-dialog>
+  <code-editor class="controller-code-editor--code-editor" readonly="true" indentWithTab="true" language="C"
+    [languages]='languages' autoFocus="true" [ngModel]="code" />
 </div>
