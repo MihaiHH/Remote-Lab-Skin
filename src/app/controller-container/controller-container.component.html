@@ -11,22 +11,13 @@
       <div>
         <mat-tab-group>
           <mat-tab label="Pestaña 1">Contenido 1
-            <div style="height: 500px">
-              <code-editor indentWithTab="true" language="C" [languages]='languages' autoFocus="true"
-                [(ngModel)]="value" />
-            </div>
+            <app-controller-code-editor [code]="code"></app-controller-code-editor>
           </mat-tab>
           <mat-tab label="Pestaña 2">Contenido 2
-            <div style="height: 500px">
-              <code-editor indentWithTab="true" language="C" [languages]='languages' autoFocus="true"
-                [(ngModel)]="value" />
-            </div>
+            <app-controller-code-editor [code]="code"></app-controller-code-editor>
           </mat-tab>
           <mat-tab label="Pestaña 3">Contenido 3
-            <div style="height: 500px">
-              <code-editor indentWithTab="true" language="C" [languages]='languages' autoFocus="true"
-                [(ngModel)]="value" />
-            </div>
+            <app-controller-code-editor [code]="code"></app-controller-code-editor>
           </mat-tab>
         </mat-tab-group>
       </div>
