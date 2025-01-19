@@ -1,0 +1,22 @@
+<div style="height: 100%">
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" [opened]="isSidenavOpen">
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div>
+        <mat-tab-group>
+          <mat-tab label="Pestaña 1">Contenido 1
+          </mat-tab>
+          <mat-tab label="Pestaña 2">Contenido 2
+          </mat-tab>
+          <mat-tab label="Pestaña 3">Contenido 3
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+      <div>
+        <button (click)="sidenav.toggle()" [matTooltip]="sidenav.opened ? 'Hide Sidenav' : 'Show Sidenav'">
+          {{ sidenav.opened ? '<' : '>' }} </button>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
