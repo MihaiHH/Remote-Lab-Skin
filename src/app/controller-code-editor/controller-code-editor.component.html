@@ -2,4 +2,10 @@
   <app-cam-dialog></app-cam-dialog>
   <code-editor class="controller-code-editor--code-editor" readonly="true" indentWithTab="true" language="C"
     [languages]='languages' autoFocus="true" [ngModel]="code" />
+    <button mat-mini-fab class="controller-code-editor--verify-button" matTooltip="Verificar">
+      <mat-icon>check</mat-icon>
+    </button>
+    <button mat-mini-fab class="controller-code-editor--compile-button" matTooltip="Compilar y subir">
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
 </div>

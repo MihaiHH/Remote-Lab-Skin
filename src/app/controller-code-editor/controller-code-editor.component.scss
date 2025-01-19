@@ -6,3 +6,19 @@
 .controller-code-editor--code-editor {
   width: 100%;
 }
+
+.controller-code-editor--compile-button {
+  position: fixed;
+  bottom: 7%;
+  right: 30px;
+  z-index: 1000;
+  border-radius: 40px;
+}
+
+.controller-code-editor--verify-button {
+  position: fixed;
+  bottom: 7%;
+  right: 80px;
+  z-index: 1000;
+  border-radius: 40px;
+}
