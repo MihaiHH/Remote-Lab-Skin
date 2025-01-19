@@ -1,6 +1,11 @@
 <div style="height: 100%">
   <mat-sidenav-container>
     <mat-sidenav #sidenav mode="side" [opened]="isSidenavOpen">
+      <mat-nav-list>
+        @for (example of exampleCodes; track example.title) {
+        <mat-list-item>{{ example.title }}</mat-list-item>
+        }
+      </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
       <div>
