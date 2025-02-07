@@ -503,3 +503,5 @@ export const EXAMPLE_CODES: CodeExample[] = [
     type: 'ESP32',
   },
 ];
+
+export const AVAILABLE_CONTROLLERS = ['Todos', 'ESP32', 'Arduino'];
