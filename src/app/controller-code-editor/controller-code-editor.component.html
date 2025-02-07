@@ -1,7 +1,10 @@
 <div class="controller-code-editor--container">
   <app-cam-dialog></app-cam-dialog>
-  <code-editor class="controller-code-editor--code-editor" readonly="true" indentWithTab="true" language="C"
+  <code-editor class="controller-code-editor--code-editor" indentWithTab="true" language="C"
     [languages]='languages' autoFocus="true" [ngModel]="code" />
+    <button mat-mini-fab class="controller-code-editor--save-button" matTooltip="Guardar proyecto">
+      <mat-icon>save</mat-icon>
+    </button>
     <button mat-mini-fab class="controller-code-editor--verify-button" matTooltip="Verificar">
       <mat-icon>check</mat-icon>
     </button>

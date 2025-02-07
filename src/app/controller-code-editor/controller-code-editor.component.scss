@@ -8,17 +8,31 @@
 }
 
 .controller-code-editor--compile-button {
-  position: fixed;
-  bottom: 7%;
-  right: 30px;
+  position: sticky;
+  bottom: 3%;
+  left: 96%;
   z-index: 1000;
   border-radius: 40px;
+  background-color: #394a59;
+  color: white;
 }
 
 .controller-code-editor--verify-button {
-  position: fixed;
-  bottom: 7%;
-  right: 80px;
+  position: sticky;
+  bottom: 3%;
+  left: 92.5%;
   z-index: 1000;
   border-radius: 40px;
+  background-color: #394a59;
+  color: white;
+}
+
+.controller-code-editor--save-button {
+  position: sticky;
+  bottom: 3%;
+  left: 89%;
+  z-index: 1000;
+  border-radius: 40px;
+  background-color: #394a59;
+  color: white;
 }

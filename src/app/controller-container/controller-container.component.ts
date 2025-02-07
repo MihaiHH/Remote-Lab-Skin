@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import {
   MatSidenavModule,
   MatSidenavContainer,
@@ -7,14 +7,18 @@ import {
 import { MatTabsModule, MatTabGroup } from '@angular/material/tabs';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import {
+  AVAILABLE_CONTROLLERS,
   ESP32_CODE_EXAMPLE,
   EXAMPLE_CODES,
 } from '../../constants/code-examples.constants';
 import { MatListItem, MatNavList } from '@angular/material/list';
 import { ControllerCodeEditorComponent } from '../controller-code-editor/controller-code-editor.component';
 import { MatIconModule } from '@angular/material/icon';
-import { MatDividerModule } from '@angular/material/divider';
+import { MatDivider, MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
+import {MatMenuModule, MatMenuTrigger} from '@angular/material/menu';
+
+
 
 @Component({
   selector: 'app-controller-container',
@@ -31,17 +35,23 @@ import { MatButtonModule } from '@angular/material/button';
     MatButtonModule,
     MatDividerModule,
     MatIconModule,
+    MatDivider,
+    MatMenuModule,
+    MatMenuTrigger
   ],
   templateUrl: './controller-container.component.html',
   styleUrl: './controller-container.component.scss',
 })
 export class ControllerContainerComponent {
-  isSidenavOpen: boolean = true;
+  /** TODO Añadir funcionalidad de ocua mostrar sidenav */
+  // isSidenavOpen: boolean = true;
   code = ESP32_CODE_EXAMPLE;
   exampleCodes = EXAMPLE_CODES;
+  availableControllers = AVAILABLE_CONTROLLERS;
 
-  toggleSidenav(sidenav: any): void {
-    sidenav.toggle();
-    this.isSidenavOpen = sidenav.opened;
-  }
+  /** TODO Añadir funcionalidad de ocua mostrar sidenav */
+  // toggleSidenav(sidenav: any): void {
+  //   sidenav.toggle();
+  //   this.isSidenavOpen = sidenav.opened;
+  // }
 }

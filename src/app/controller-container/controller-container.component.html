@@ -1,18 +1,72 @@
-<div style="height: 100%">
+<div style="height: 100%;width: 100%;">
   <mat-sidenav-container style="height: 100%;">
-    <mat-sidenav style="width: 15%;" #sidenav mode="side" [opened]="isSidenavOpen">
-      <h3 style="display: flex; margin:10px 0 10px 15px">Código de ejemplo</h3>
+    <mat-sidenav style="width: 15%;   background-color: #394A59; color: #ffffff; border-radius: 0" #sidenav mode="side"
+      [opened]="true">
+      <div style="display: flex; justify-content: space-between;">
+        <h3 style="margin:12px 0 12px 15px;">Mi laboratorio</h3>
+        <button style="color: white;" mat-icon-button [matMenuTriggerFor]="menu"
+          aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu style="border-radius: 10px;" #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>school</mat-icon>
+            <span>Tutoriales</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>folder_open</mat-icon>
+            <span>Mis proyectos</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>edit</mat-icon>
+            <span>Correciones</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>assignment</mat-icon>
+            <span>Proyectos a corregir</span>
+          </button>
+        </mat-menu>
+      </div>
+      <!-- TODO Añadir funcionalidad de ocua mostrar sidenav-->
+      <!-- @if (sidenav.opened) {
+        <button class="controller-container--button" mat-mini-fab aria-label (click)="sidenav.toggle()"
+          matTooltip="Ocultar ejemplos">
+          <mat-icon>chevron_left</mat-icon>
+        </button>
+        } -->
+      <mat-divider></mat-divider>
+      <div style="margin-left: 15px; display: flex; justify-content: flex-start; align-items: center;">
+        <mat-icon style=" margin-top: 5px; color:white">memory</mat-icon>
+        <h3 style="margin:12px 0 0 10px;">Placas disponibles</h3>
+      </div>
       <mat-nav-list>
-        @for (example of exampleCodes; track example.title) {
-        <mat-list-item>{{ example.title }}</mat-list-item>
+        @for (controller of availableControllers; track controller) {
+        <mat-list-item class="controller-container--nav-list-text">{{ controller }}</mat-list-item>
         }
       </mat-nav-list>
+      <mat-divider></mat-divider>
+      <mat-divider></mat-divider>
+      <div style="margin-left: 15px; display: flex; justify-content: flex-start; align-items: center;">
+        <mat-icon style=" margin-top: 5px; color:white">school</mat-icon>
+        <h3 style="margin:12px 0 0 10px;">Tutoriales</h3>
+      </div>
+      <mat-nav-list>
+        @for (example of exampleCodes; track example.title) {
+        <mat-list-item class="controller-container--nav-list-text">{{ example.title }}</mat-list-item>
+        }
+      </mat-nav-list>
+      <mat-divider></mat-divider>
     </mat-sidenav>
+
     <mat-sidenav-content>
-      <button class="controller-container--button" mat-mini-fab aria-label (click)="sidenav.toggle()"
-        [matTooltip]="sidenav.opened ? 'Ocultar ejemplos' : 'Mostrar ejemplos'">
-        <mat-icon>{{sidenav.opened ? 'chevron_left' : 'chevron_right'}}</mat-icon>
+      <!-- TODO Añadir funcionalidad de ocua mostrar sidenav-->
+      <!-- @if (!sidenav.opened) {
+      <button class="controller-container--show-button" mat-mini-fab aria-label (click)="sidenav.toggle()"
+        matTooltip="Mostrar ejemplos">
+        <mat-icon>chevron_right</mat-icon>
       </button>
+      } -->
+
       <mat-tab-group style="height: 100%;">
         <mat-tab label="ESP32 COM1">
           <app-controller-code-editor [code]="code"></app-controller-code-editor>

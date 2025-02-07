@@ -1,8 +1,41 @@
 .controller-container--button {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: none;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.controller-container--sidenav {
+  width: 15%;
+  background-color: #394a59;
+  color: #ffffff;
+  border-radius: 0;
+}
+
+.controller-container--button:hover {
+  border-radius: 0px 5px 5px 0px;
+  box-shadow: none;
+}
+
+.controller-container--show-button {
   border-radius: 0px 5px 5px 0px;
   position: absolute;
-  margin-bottom: 10px;
   z-index: 1000;
+  width: 40px;
+  height: 40px;
+  background-color: #394a59;
+  color: #ffffff;
+}
+
+::ng-deep
+  .controller-container--nav-list-text
+  .mdc-list-item__content
+  .mdc-list-item__primary-text,
+::ng-deep
+  .controller-container--nav-list-text:hover
+  .mdc-list-item__content
+  .mdc-list-item__primary-text {
+  color: white;
 }
